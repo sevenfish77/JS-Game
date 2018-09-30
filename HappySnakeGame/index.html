@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>贪吃蛇案例</title>
+	<style>
+		.map {
+			width: 600px;
+			height: 400px;
+			background: yellowgreen;
+			opacity: 0.4;
+			margin: 0 auto;
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+	<!-- 创建一个地图 -->
+	<div class="map"></div>
+
+	<!-- 引入食物js -->
+	<script src="js/Food.js"></script>
+	<!-- 引入蛇对象js -->
+	<script src="js/Snake.js"></script>
+	<!-- 引入游戏对象js -->
+	<script src="js/Game.js"></script>
+
+	<script>
+		
+		//初始化游戏对象
+		var gm = new Game(document.querySelector(".map"));
+
+		//初始化游戏---开始游戏
+		gm.init();	
+
+
+		/*****************************外部测试*******************************/
+		// var sw = new Food();
+		// //始终只会有一个因为remove()私有函数
+		// sw.init(document.querySelector(".map"));
+		
+		// var snake = new Snake();
+		// //此时使用定时器移动蛇
+		// snake.init(document.querySelector(".map"));//先在地图上看到小蛇
+		// setInterval(function(){
+		// 	snake.move(sw,document.querySelector(".map"));
+		// 	snake.init(document.querySelector(".map"));//先在地图上看到小蛇
+		// },300);
+
+		// snake.init(document.querySelector(".map"));//先在地图上看到小蛇
+		// snake.move(sw,document.querySelector(".map"));
+		// snake.init(document.querySelector(".map"));//先在地图上看到小蛇
+		// snake.move(sw,document.querySelector(".map"));	
+		// snake.init(document.querySelector(".map"));//先在地图上看到小蛇
+		// snake.move(sw,document.querySelector(".map"));					
+	</script>
+</body>
+</html>
